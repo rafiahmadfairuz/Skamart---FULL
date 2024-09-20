@@ -1,0 +1,576 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+/* =============================== VARIABEL =============================== */
+:root {
+  --warna-utama: #2c6c2f;
+  --pendukung: #ecffe6;
+  --hover: #d5ed9f;
+  --tinggi-gambar-card: 220px;
+  --lebar-gambar-card: 100%;
+  --lebar-card: 220px;
+}
+
+body {
+  font-family: "Quicksand", sans-serif !important;
+  background-color: #fff7fc;
+}
+
+/* Mengatur scrollbar secara keseluruhan */
+::-webkit-scrollbar {
+  width: 3px; /* Lebar scrollbar */
+}
+
+/* Mengatur track scrollbar */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Warna latar belakang track scrollbar */
+  border-radius: 10px; /* Membuat track scrollbar melengkung */
+}
+
+/* Mengatur thumb scrollbar */
+::-webkit-scrollbar-thumb {
+  background: #888; /* Warna thumb scrollbar */
+  border-radius: 10px; /* Membuat thumb scrollbar melengkung */
+}
+
+/* Mengatur thumb scrollbar saat hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Warna thumb scrollbar saat hover */
+}
+
+/* ======================================================================== */
+
+/* =============================== REBOOT STYLE BOOTSTRAP =============================== */
+.bg-success,
+.btn-success {
+  background-color: var(--warna-utama) !important;
+}
+.text-success {
+  color: var(--warna-utama) !important;
+}
+.offcanvas {
+  height: 70vh !important;
+}
+.offcanvas-navbar {
+  height: 100% !important;
+  margin-top: -10px !important;
+}
+
+/* ======================================================================== */
+
+/* =============================== NAVBAR =============================== */
+nav input:focus {
+  outline: 0;
+}
+.logo {
+  color: var(--warna-utama);
+}
+.input-group {
+  position: relative;
+}
+nav a {
+  color: black;
+  text-decoration: none;
+  transition: 0.2s;
+  letter-spacing: 1px;
+}
+nav a:hover {
+  color: var(--warna-utama);
+}
+.input {
+  height: 40px;
+  border: solid 1.5px #9e9e9e;
+  background: none;
+  padding: 0.46rem;
+  transition: border 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  font-size: 0.875rem;
+}
+
+.user-label {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  pointer-events: none;
+  transform: translateY(0.3rem);
+  transition: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  font-size: 0.75rem;
+}
+
+.input:focus,
+input:valid {
+  outline: none;
+  border: 1.5px solid var(--warna-utama);
+}
+
+.input:focus ~ .user-label,
+input:valid ~ .user-label {
+  transform: translateY(-51%) scale(0.8);
+  padding: 0 0.1em;
+  font-size: 0.75rem;
+}
+/* ======================================================================== */
+
+/* =============================== CAROUSEL =============================== */
+
+.carousel img {
+  width: 100%;
+  height: fit-content;
+  object-fit: cover;
+}
+/* ======================================================================== */
+
+/* =============================== KATEGORI =============================== */
+.isi-kategori {
+  white-space: nowrap;
+  width: 1320px;
+  overflow-x: auto;
+}
+
+.kotak-kategori {
+  min-width: 90px;
+  min-height: 90px;
+  background-color: var(--pendukung);
+  transition: 0.2s;
+}
+.kotak-kategori img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
+.kotak {
+  cursor: pointer;
+}
+.kotak:hover .kotak-kategori {
+  background-color: var(--hover);
+}
+.terpilih {
+  background-color: var(--hover);
+}
+/* ======================================================================== */
+
+/* =============================== PROMO =============================== */
+
+.promo {
+  background-image: url("../asset/img/Taieri.png");
+  background-repeat: no-repeat;
+  width: 85%;
+  background-color: var(--hover);
+}
+.pr {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.kotak-promo {
+  min-width: 600px;
+}
+#card-promo {
+  width: 180px;
+}
+#card-promo img {
+  width: var(--lebar-gambar-card);
+  height: 180px;
+}
+
+.card img {
+  width: var(--lebar-gambar-card);
+  height: var(--tinggi-gambar-card);
+  object-fit: cover;
+}
+
+.card {
+  width: var(--lebar-card);
+  transition: 0.2s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.card:hover {
+  transform: translateY(-4px);
+}
+.card span {
+  font-size: 13px;
+}
+
+/* ======================================================================== */
+
+/* =============================== PRODUK DISPLAY =============================== */
+#produk {
+  overflow-x: hidden;
+}
+.judul-produk {
+  height: 10vh;
+}
+#palinglaris {
+  overflow-x: hidden;
+}
+/* ======================================================================== */
+
+/* =============================== TENTANNG =============================== */
+#tentang {
+  background: linear-gradient(
+    135deg,
+    #d5ed9f 0%,
+    #c7d73a 30%,
+    #b0c84a 60%,
+    #9aab3b 100%
+  );
+}
+.pembungkus-about {
+  width: 1320px;
+  overflow-x: auto;
+}
+.card-about {
+  border: 0.1px solid #ecffe6;
+  color: #fff7fc;
+  transition: 0.3s;
+  min-width: 299px;
+  max-width: 300px;
+  background-image: url("../asset/img/orangmelayani.jpg") ;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.card-about:hover {
+  color: #9aab3b;
+  border-color: #9aab3b;
+}
+.dua {
+  background-image: url("../asset/img/produklengkap.jpeg") !important;
+}
+.tiga {
+  background-image: url("../asset/img/murah.jpg");
+}
+.empat {
+  background-image: url("../asset/img/orangmenerimaproduk.jpg");
+}
+.t-a {
+  height: 245px;
+}
+/* ======================================================================== */
+
+/* =============================== FOOTER =============================== */
+#footer {
+  background: linear-gradient(
+    135deg,
+    #d5ed9f 0%,
+    #c7d73a 30%,
+    #b0c84a 60%,
+    #9aab3b 100%
+  );
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5), 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+#footer .bi {
+  transition: 0.2s;
+}
+#footer .bi:hover {
+  color: var(--warna-utama);
+}
+
+/* ======================================================================== */
+.cart-item img {
+  max-width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+.cart-item-controls {
+  display: flex;
+  align-items: center;
+}
+.cart-item-controls input {
+  width: 40px;
+  text-align: center;
+  margin: 0 10px;
+}
+
+/* =============================== DETAIL PRODUCT =============================== */
+.detail-produk {
+  width: 90%;
+}
+.co {
+  width: 100%;
+  height: fit-content;
+}
+.img-utama {
+  width: 450px;
+  height: 450px;
+  object-fit: cover;
+}
+.bungkusImgKecil {
+  min-width: 300px;
+  overflow-x: auto;
+}
+.img-kecil {
+  width: 68px;
+  height: 78px;
+  object-fit: cover;
+}
+.img-co {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+.button-back {
+  text-decoration: none;
+  border: none;
+  background: none;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+}
+
+.button-back::before {
+  margin-left: auto;
+}
+
+.button-back::after,
+.button-back::before {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: #f44336;
+  display: block;
+  transition: 0.5s;
+}
+
+.button-back:hover::after,
+.button-back:hover::before {
+  width: 100%;
+}
+.deskripsi i {
+  transition: 0.2s;
+}
+.deskripsi i:hover {
+  color: #2c6c2f;
+}
+.bungkusImg {
+  
+  overflow: hidden;
+}
+/* ======================================================================== */
+
+.bayar {
+  width: 100%;
+}
+
+#komen {
+  max-height: 507px;
+  overflow-y: scroll;
+}
+/* ================================DASHBOARD STYLE================================ */
+.carousel-inner img{
+  object-fit: cover;
+}
+.container-fluid {
+ margin: 0 !important;
+ padding: 0 !important;
+}
+.gambar {
+ height: 550px !important;
+ object-fit: cover !important;
+}
+ .zoom {
+   transition: transform 0.1s ease, transform-origin 0.1s ease;
+   transform-origin: center center; 
+}
+ .zoom.zoomed {
+   transform: scale(2);
+   cursor: crosshair;
+}
+/* ============================================================================ */
+
+@media screen and (max-width: 400px) {
+  .promo {
+    width: 100%;
+    overflow-x: hidden !important;
+  }
+  .detail-produk {
+    width: 100%;
+  }
+  .img-utama {
+    width: 300px;
+    height: 300px;
+  }
+  .img-kecil {
+    width: 100%;
+    height: 85px;
+  }
+  .img-co {
+    width: 100px;
+    height: 100px;
+  }
+  .co {
+    width: 100%;
+    height: fit-content;
+  }
+  .card img {
+    max-width: 150px;
+    max-height: 150px;
+    object-fit: cover;
+  }
+  .card {
+    width: 149px;
+  }
+  .bayar {
+    width: 100% !important;
+  }
+  .stok {
+    font-size: 10px !important;
+  }
+  .card-produk h5 {
+    font-size: 17px;
+  }
+  .ulasan {
+    font-size: 11px !important;
+  }
+  #card-promo img {
+    height: 100px;
+    width: 100px;
+  }
+  #card-promo {
+    width: 160px;
+  }
+}
+
+@media screen and (min-width: 401px) and (max-width: 767px) {
+  .promo {
+    width: 100%;
+  }
+  .detail-produk {
+    width: 100%;
+  }
+
+  .img-utama {
+    width: 300px;
+    height: 300px;
+  }
+  .img-kecil {
+    width: 100%;
+    height: 85px;
+  }
+  .img-co {
+    width: 100px;
+    height: 100px;
+  }
+  .co {
+    width: 100%;
+    height: fit-content;
+  }
+  .card img {
+    max-width: 170px;
+    max-height: 170px;
+    object-fit: cover;
+  }
+  .card {
+    width: 170px;
+  }
+  .bayar {
+    width: 100%;
+  }
+  .card-produk h5 {
+    font-size: 17px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .promo {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  .promo {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1399px) {
+  .promo {
+    width: 100%;
+  }
+}
+
+.input-container {
+  position: relative;
+  display: flex;
+  height: 2.8rem;
+  width: 80%;
+  min-width: 200px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.05);
+}
+
+.input-container input {
+  height: 100%;
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid rgb(176 190 197);
+  background-color: transparent;
+  padding: 0.625rem 70px 0.625rem 0.75rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 400;
+  color: rgb(69 90 100);
+  outline: none;
+  transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.input-container input:focus {
+  border: 1px solid rgb(236 72 153);
+}
+
+.invite-btn {
+  position: absolute;
+  width: 65px;
+  right: 4px;
+  top: 4px;
+  bottom: 4px;
+  border-radius: 4px;
+  background-color: var(--warna-utama);
+  color: #fff;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  border: none;
+  transition: 0.6s ease;
+}
+
+.invite-btn:hover {
+  right: 2px;
+  top: 2px;
+  bottom: 2px;
+  border-radius: 8px;
+}
+
+.input-container input:placeholder-shown ~ .invite-btn {
+  pointer-events: none;
+  background-color: gray;
+  opacity: 0.5;
+}
+
+
+/* Login Register */
+
+  .login-card span {
+  font-size: 12px;
+  }
+  .LogReg input:focus {
+  border:1px solid green;
+  outline: none;
+  }
+  .icon {
+  position: absolute;
+  top: 5px;
+  left: 1rem;
+  fill: none;
+  width: 1rem;
+  height: 1rem;
+  }
